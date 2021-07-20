@@ -1,0 +1,74 @@
+---
+title: "Estrutura de dados"
+---
+---
+vetores
+---
+```{r}
+x=c(1,2,3,4,5,6)
+x
+```
+
+
+```{r}
+x[1]
+x[1]=10
+x[1]
+```
+
+
+```{r}
+Y=c("a","b","c","d")
+Y
+Z=c(1L,2L,3L)
+Z
+```
+Matrizes
+```{r}
+VADeaths
+colnames(VADeaths)
+rownames(VADeaths)
+
+```
+Matrizes
+```{r}
+#so a coluna 1
+VADeaths[,1]
+#so linha 1
+VADeaths[1,]
+#linhas 1 ate 3
+VADeaths[1:3,]
+VADeaths[c(1,3,5)]
+```
+Data Frame
+```{r}
+longley
+#funciona como matriz
+longley[,1:3]
+#acesso coluna com $
+longley$Unemployed
+#ou nome
+longley['Unemployed']
+
+
+```
+
+Listas
+```{r}
+ability.cov
+#acessando elementos
+ability.cov$cov
+ability.cov[1]
+#verificando que sao objetos deferentes
+class(ability.cov$cov)
+class(ability.cov$center)
+#cessando elemento da lista
+ability.cov$cov[,1:3]
+```
+
+Factores
+```{r}
+#fatores
+state.region
+```
+

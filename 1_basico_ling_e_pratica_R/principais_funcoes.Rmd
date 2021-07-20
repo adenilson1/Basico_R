@@ -1,0 +1,70 @@
+---
+title: "Principais funções"
+---
+Head e Tail
+```{r}
+esoph
+#default 6 linhas
+head(esoph)
+tail(esoph)
+#10 linhas
+head(esoph, n=10)
+```
+DImensao
+```{r}
+dim(esoph)
+```
+comprimento
+```{r}
+#se usar com objeto bidimensional vai retornar colunas
+length("is lands" )
+```
+
+nomes de colunas
+
+```{r}
+colnames(esoph)
+```
+Nome de linhas
+```{r}
+rownames(esoph)
+```
+
+
+Resumo
+```{r}
+summary(esoph)
+```
+
+
+
+Escolher arquivo
+```{r}
+x=file.choose()
+x
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

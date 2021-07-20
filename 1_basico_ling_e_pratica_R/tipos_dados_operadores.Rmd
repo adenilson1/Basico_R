@@ -1,0 +1,54 @@
+---
+title: "tipos de dados e operadores"
+---
+
+```{r}
+#declaração de numerica
+delta = 8
+class(delta)
+```
+
+```{r}
+#inteiro
+delta = 8L
+class(delta)
+```
+
+
+```{r}
+#logico
+logico = TRUE
+logico = F
+caractere = "Texto"
+caractere = 'Testo'
+```
+```{r}
+#Operadores
+c = 2
+d = 4
+(c + d) * d
+e = (c + d) * d
+e
+```
+
+```{r}
+#Teste logico
+a=1
+b=2
+a < b
+
+```
+
+```{r}
+a == b
+```
+
+
+```{r}
+sqrt(2500)
+```
+
+
+```{r}
+```
+

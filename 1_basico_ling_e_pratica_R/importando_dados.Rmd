@@ -1,0 +1,26 @@
+---
+title: "Importando dados"
+---
+
+Instalando pacotes
+```{r}
+install.packages("xlsx")
+library(xlsx)
+
+```
+
+#texto
+
+```{r}
+x=read.csv(file.choose(),header=TRUE, sep = ",")
+x
+x=read.csv("Credit.csv", header = TRUE,sep = ",")
+x
+```
+
+Excel
+```{r}
+dados=read.xlsx(file.choose(), sheetIndex = 1)
+dados
+```
+

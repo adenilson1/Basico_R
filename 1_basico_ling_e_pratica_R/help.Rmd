@@ -1,0 +1,10 @@
+---
+title: "Ajuda"
+---
+```{r}
+help(sd)
+
+#outra forma
+head(iris)
+```
+
