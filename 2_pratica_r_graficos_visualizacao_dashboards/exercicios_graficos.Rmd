@@ -1,0 +1,68 @@
+---
+title: "Exercicio_graficos"
+---
+
+Paletas de cores
+```{r}
+#importa
+install.packages("RColorBrewer")
+library(RColorBrewer)
+```
+
+
+Importando dados
+```{r}
+dados = read.csv("/home/adenilson/Documentos/doc_udemy/form_cien_de_dados_ R_e_Python/dados/dados.csv", 
+                 sep = ";", na.strings = "", stringsAsFactors = T)
+head(dados)
+summary(dados$PIB)
+summary(dados$VALOREMPENHO)
+```
+
+Aanlise grafica PIB
+```{r}
+#valo de empenho
+boxplot(dados$VALOREMPENHO, main = "Valores de empenho",  col = brewer.pal(n = 3, name = "Paired"), outline = F)
+hist(dados$VALOREMPENHO, main = "Valores de empenho", col = brewer.pal(n = 3, name = "Paired"))
+#pib
+boxplot(dados$PIB, main = "PIB",  col = brewer.pal(n = 3, name = "Paired"),outline = F)
+hist(dados$PIB, main = "PIB",  col = brewer.pal(n = 3, name = "Paired"))
+```
+Analise dos maiores valores
+```{r}
+#Empenho
+empenho = head(dados[order(-dados$VALOREMPENHO), ],10)
+barplot(empenho$VALOREMPENHO, main = "Maiores valores de empenho", col = brewer.pal(n = 10, name = "RdBu"), las = 1)
+legend("topright", legend = empenho$MUNICIPIO,  col = brewer.pal(n = 3, name = "RdBu"), lty = 1:2, cex = 0.8, ncol = 2, lwd = 4)
+box()
+
+#PIB
+pib = head(dados[order(-dados$PIB), ],10)
+barplot(pib$PIB, main = "Maiores valores de PIB",col = brewer.pal(n = 10, name = "RdBu"), las = 1)
+legend("topright", legend = empenho$MUNICIPIO,  col = brewer.pal(n = 3, name = "RdBu"), lty = 1:2, cex = 0.8, ncol = 2, lwd = 4)
+box()
+```
+
+
+Relação entre o Empenho e o PIB
+
+```{r}
+#Calculo de % de PIB foi empenhado
+dados$PROPORCAO = dados$VALOREMPENHO / dados$PIB
+Mprop = head(dados[order(-dados$PROPORCAO),],10)
+barplot(Mprop$PROPORCAO, main = "Maiores gastos em proporção ao PIB", col = brewer.pal(n = 10, name = "Set2"), las = 2)
+legend("topright", legend = Mprop$MUNICIPIO, col = brewer.pal(n = 10, name = "Set2"), lty = 1:2, cex = 0.8, ncol= 2, lwd = 4)
+box()
+```
+
+
+
+
+
+
+
+
+
+
+
+
